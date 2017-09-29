@@ -5,7 +5,7 @@ import json
 
 import requests
 
-from classes.N9K_aaa_login import AAALogin
+from N9K_aaa_login import AAALogin
 
 
 username = "vagrant"
