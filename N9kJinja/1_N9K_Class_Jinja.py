@@ -19,25 +19,6 @@ ip_addr =  "127.0.0.1:8443"
 
 
 
-def aaa_logout(username, ip_addr, auth_cookie):
-    payload = {
-        'aaaUser' : {
-            'attributes' : {
-                'name' : username
-                }
-            }
-        }
-    url = "https://" + ip_addr + "/api/aaaLogout.json"
-
-    response = requests.request("POST", url, data=payload,
-                                cookies=auth_cookie, verify=False)
-
-    print()
-    print ("aaaLogout RESPONSE:")
-    print (json.dumps(json.loads(response.text), indent=2))
-    print()
-
-
 def post(auth_cookie, url, payload):
     response = requests.request("POST", url, data=payload,
                                 cookies=auth_cookie, verify=False)
@@ -64,4 +45,4 @@ if __name__ == '__main__':
     if status == requests.codes.ok:
         url = "https://" + ip_addr + "/api/mo/sys.json"
         post(auth_cookie, url, confpayload)
-        aaa_logout(username, ip_addr, auth_cookie)
+        n9klogin.aaa_logout()
