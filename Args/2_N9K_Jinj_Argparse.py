@@ -5,7 +5,7 @@ import os
 import jinja2
 import requests
 
-from classes.N9K_aaa_login import AAALogin
+from N9K_aaa_login import AAALogin
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-v', action='append', dest="vlans", default=[], help='add repeated vlans to a list')
