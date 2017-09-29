@@ -38,7 +38,7 @@ if __name__ == '__main__':
 
     loader = jinja2.FileSystemLoader(os.path.abspath(os.path.join(os.path.dirname(__file__),'..','templates')))
     jenv = jinja2.Environment(loader=loader, trim_blocks=True, lstrip_blocks=True)
-    template = jenv.get_template('N9KJinjaLooVlan.j2')
+    template = jenv.get_template('n9KJinjaLooVlan.j2')
 
     vlans = [r'"vlan-800"',r'"vlan-900"']
 

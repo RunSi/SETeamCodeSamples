@@ -55,7 +55,7 @@ if __name__ == '__main__':
     #loader = jinja2.FileSystemLoader(os.getcwd())
     loader = jinja2.FileSystemLoader(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates')))
     jenv = jinja2.Environment(loader=loader, trim_blocks=True, lstrip_blocks=True)
-    template = jenv.get_template('N9kJinja.j2')
+    template = jenv.get_template('n9kJinja.j2')
     confpayload = template.render(if_name=r'"eth1/5"', description=r'"JinjaStuff5"')
     print(confpayload)
 
