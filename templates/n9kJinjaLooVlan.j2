@@ -1,0 +1,22 @@
+{
+  "topSystem": {
+    "children": [
+      {
+        "bdEntity": {
+          "children": [
+          {% for vlan in vlans %}
+            {
+              "l2BD": {
+                "attributes": {
+                  "fabEncap": {{ vlan }},
+                  "pcTag": "1" 
+                }
+              }
+            }
+            {% endfor %}
+          ]
+        }
+      }
+    ]
+  }
+}

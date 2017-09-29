@@ -1,0 +1,24 @@
+{
+  "topSystem": {
+    "children": [
+      {
+        "interfaceEntity": {
+          "children": [
+          {% for if_name in iface_list %}
+            {
+            
+              "l1PhysIf": {
+                "attributes": {
+                  "accessVlan": "vlan-20",
+                  "descr": {{ description }},
+                  "id": {{ if_name }}
+                }
+              }
+            }
+            {% endfor %}
+          ]
+        }
+      }
+    ]
+  }
+}

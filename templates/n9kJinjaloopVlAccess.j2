@@ -1,0 +1,28 @@
+{
+  "topSystem": {
+    "children": [
+      {      
+        "interfaceEntity": {
+          "children": [
+          {% for if_name in iface_list %}
+            {        
+              "l1PhysIf": {
+                "attributes": {
+                 
+                  "accessVlan": {{ vlan }}
+                  "adminSt": "up",
+                  "descr": {{ description }},
+                  "id": {{if_name}},
+                  "userCfgdFlags": "admin_state"
+                  
+                }
+              
+              } 
+            }
+            {% endfor %}
+          ]
+        }
+      }
+    ]
+  }
+}
