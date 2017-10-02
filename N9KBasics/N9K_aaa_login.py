@@ -63,3 +63,7 @@ class AAALogin():
         print(json.dumps(json.loads(response.text), indent=2))
         print(response.status_code)
         print()
+
+class DCloud():
+    def __init__(self):
+        AAALogin.__init__(self, 'admin','admin','127.0.0.1:8443')
