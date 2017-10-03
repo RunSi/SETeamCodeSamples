@@ -4,7 +4,7 @@ import os
 import jinja2
 import requests
 
-from classes.N9K_aaa_login import AAALogin
+from N9K_aaa_login import AAALogin
 
 """
 Modify these please
