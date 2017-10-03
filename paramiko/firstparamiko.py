@@ -4,12 +4,15 @@ __author__ = 'sihart'
 import paramiko
 import time
 
-ip = '127.0.0.1'
-username = 'vagrant'
-password = 'vagrant'
-port =2222
+ip = '198.18.134.140'
+username = 'admin'
+password = 'C1sco12345'
+port =22
 
 remote_conn_pre = paramiko.SSHClient()
+
+#use this to avoid error on windows machines
+#remote_conn_pre.set_missing_host_key_policy(paramiko.WarningPolicy())
 
 remote_conn_pre.set_missing_host_key_policy(paramiko.AutoAddPolicy)
 

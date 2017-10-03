@@ -13,9 +13,7 @@ username = "vagrant"
 password = "vagrant"
 ip_addr =  "127.0.0.1:8443"
 
-# username = "admin"
-# password = "cisco123"
-# ip_addr =  "10.10.20.58"
+
 
 
 

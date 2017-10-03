@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+import sys
 
 import jinja2
 import requests
@@ -14,7 +15,9 @@ parser.add_argument('-i', '--ipaddr',  default="127.0.0.1:8443", help="Enter the
 parser.add_argument('-u', '--user-val',  default="vagrant", help='enter username for Nexus9K or 3K')
 parser.add_argument('-p', '--passw', default="vagrant", help="Enter password for Nexus9k/3k")
 
+
 args = parser.parse_args()
+
 print(args.user_val)
 print(args.passw)
 newvlans = []
