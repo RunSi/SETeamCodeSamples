@@ -11,3 +11,10 @@ jenv = jinja2.Environment(loader=loader, trim_blocks=True, lstrip_blocks=True)
 template = jenv.get_template('simplejinja.j2')
 
 print(template.render(if_name='eth 1/2'))
+
+file = open('config', 'w')
+file.write(template.render(if_name='eth 1/2'))
+file.close()
+
+# with open('config', 'w') as file:
+#     file.write(template.render(if_name='eth 1/2'))
