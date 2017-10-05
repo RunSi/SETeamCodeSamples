@@ -3,7 +3,7 @@ __author__ = 'sihart'
 
 from random import random
 
-from simpleOOP.SE_OOP_Circle import Circle
+from SE_OOP_Circle import Circle
 
 n = 5
 #seed(40)
